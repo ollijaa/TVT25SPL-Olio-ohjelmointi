@@ -1,2 +1,2 @@
-# TVT25SPL-Olio-ohjelmointi-
+# TVT25SPL-Olio-ohjelmointi
 Olio-ohjelmoinnin perusteiden kurssin tuotokset
