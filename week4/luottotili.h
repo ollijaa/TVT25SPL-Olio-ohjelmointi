@@ -12,7 +12,7 @@ public:
     bool withdraw(double) override;
 
 protected:
-    double luottoRaja = -200;
+    double luottoRaja = 0;
 };
 
 #endif // LUOTTOTILI_H
