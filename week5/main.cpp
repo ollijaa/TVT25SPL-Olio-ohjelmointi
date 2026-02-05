@@ -7,6 +7,7 @@ int main()
     Seuraaja a("A");
     Seuraaja b("B");
     Seuraaja c("C");
+    Seuraaja d("D");
 
     n.lisaa(&a);
     n.lisaa(&b);
@@ -15,9 +16,12 @@ int main()
 
     n.postita("Tama on viesti 1");
 
-    n.poista(&b);
+    n.poista(&c);
+    n.lisaa(&d);
 
     n.postita("Tama on viesti 2");
+
+    n.tulosta();
 
     return 0;
 }

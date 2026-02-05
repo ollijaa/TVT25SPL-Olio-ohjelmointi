@@ -17,6 +17,12 @@ void Notifikaattori::lisaa(Seuraaja * add)
 void Notifikaattori::poista(Seuraaja * remove)
 {
     cout << "Notifikaattori poistaa seuraajan " << remove -> getNimi() << endl;
+
+    if(seuraajat == remove){    // Jos poistettava on listan ensimmäinen
+        seuraajat = seuraajat -> next;
+        return;
+    }
+
     Seuraaja * curr = seuraajat;
 
     while(curr -> next != nullptr){
@@ -31,8 +37,8 @@ void Notifikaattori::poista(Seuraaja * remove)
 
 void Notifikaattori::tulosta()
 {
-    Seuraaja * o = seuraajat;
     cout << "Notifikaattorin seuraajat:" << endl;
+    Seuraaja * o = seuraajat;
 
     while(o != nullptr){
         cout << "Seuraaja " << o -> getNimi() << endl;
@@ -42,8 +48,8 @@ void Notifikaattori::tulosta()
 
 void Notifikaattori::postita(string text)
 {
-    Seuraaja * o = seuraajat;
     cout << "Notifikaattori postaa viestin " << text << endl;
+    Seuraaja * o = seuraajat;
 
     while(o != nullptr){
         o -> paivitys(text);
